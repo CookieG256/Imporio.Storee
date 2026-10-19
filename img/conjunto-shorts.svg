@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 900" role="img">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#25251f"/>
+      <stop offset="1" stop-color="#10100e"/>
+    </linearGradient>
+    <linearGradient id="shirt" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#b9c0b4"/>
+      <stop offset="1" stop-color="#828a7e"/>
+    </linearGradient>
+    <linearGradient id="shorts" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#353b38"/>
+      <stop offset="1" stop-color="#202522"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="900" fill="url(#bg)"/>
+  <circle cx="165" cy="230" r="150" fill="#d4af37" opacity=".04"/>
+  <ellipse cx="368" cy="737" rx="210" ry="25" fill="#000" opacity=".58"/>
+  <path d="M244 164c25-23 58-35 96-35s71 12 96 35l62 38 82 63-60 89-69-41v195H229V313l-69 41-60-89 82-63z" fill="url(#shirt)"/>
+  <path d="M268 161c16 44 41 65 72 65s56-21 72-65" fill="none" stroke="#667066" stroke-width="8"/>
+  <path d="M229 312v195m222-195v195" fill="none" stroke="#677064" stroke-width="3" opacity=".5"/>
+  <path d="M241 526h206l30 142-119-10-13-75-15 75-119 10z" fill="url(#shorts)"/>
+  <path d="M241 542h206m-103 0v115m-77-132v-24h154v24" fill="none" stroke="#626963" stroke-width="4" opacity=".75"/>
+  <path d="M285 527v13m118-13v13" stroke="#d4af37" stroke-width="3" opacity=".7"/>
+  <text x="360" y="816" fill="#d4af37" font-family="Georgia,serif" font-size="17" letter-spacing="8" text-anchor="middle">CONJUNTO · COMODIDAD</text>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 900" role="img">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#25251f"/>
+      <stop offset="1" stop-color="#10100e"/>
+    </linearGradient>
+    <linearGradient id="fabric" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#dfd9ca"/>
+      <stop offset=".52" stop-color="#c5beaf"/>
+      <stop offset="1" stop-color="#a49d90"/>
+    </linearGradient>
+    <filter id="shadow" x="-40%" y="-30%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+  <rect width="720" height="900" fill="url(#bg)"/>
+  <circle cx="545" cy="178" r="190" fill="#d4af37" opacity=".045"/>
+  <ellipse cx="366" cy="735" rx="196" ry="28" fill="#000" opacity=".6" filter="url(#shadow)"/>
+  <path d="M264 197c24-22 57-34 96-34s72 12 96 34l71 42 105 76-68 98-73-44v319H229V369l-73 44-68-98 105-76z" fill="url(#fabric)"/>
+  <path d="m270 193 25 40c14 23 36 36 65 36s51-13 65-36l25-40" fill="none" stroke="#8d8679" stroke-width="8" opacity=".8"/>
+  <path d="M294 220c9 31 31 48 66 48s57-17 66-48" fill="none" stroke="#ede7d9" stroke-width="4" opacity=".6"/>
+  <path d="M229 367v320m262-320v320M231 679h258" fill="none" stroke="#918a7e" stroke-width="3" opacity=".45"/>
+  <path d="M104 314 81 347l47 68 29-20m407-81 23 33-47 68-29-20" fill="none" stroke="#8b8478" stroke-width="3" opacity=".5"/>
+  <text x="360" y="816" fill="#d4af37" font-family="Georgia,serif" font-size="17" letter-spacing="8" text-anchor="middle">ALGODÓN · SOFT</text>
+</svg>

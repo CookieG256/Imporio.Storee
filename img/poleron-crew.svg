@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 900" role="img">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#25251f"/><stop offset="1" stop-color="#10100e"/></linearGradient>
+    <linearGradient id="cloth" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a39c8e"/><stop offset=".5" stop-color="#777166"/><stop offset="1" stop-color="#504c44"/></linearGradient>
+  </defs>
+  <rect width="720" height="900" fill="url(#bg)"/>
+  <circle cx="175" cy="210" r="155" fill="#d4af37" opacity=".04"/>
+  <ellipse cx="360" cy="744" rx="208" ry="26" fill="#000" opacity=".58"/>
+  <path d="M260 187c29-27 62-40 100-40s71 13 100 40l67 43 92 70-64 94-74-44v331H239V350l-74 44-64-94 92-70z" fill="url(#cloth)"/>
+  <path d="M286 183c8 57 33 84 74 84s66-27 74-84" fill="none" stroke="#37342e" stroke-width="16"/>
+  <path d="M291 184c9 39 32 59 69 59s60-20 69-59" fill="none" stroke="#c0b7a6" stroke-width="3" opacity=".7"/>
+  <path d="M239 350v331m262-331v331M241 678h258" fill="none" stroke="#c0b7a6" stroke-width="3" opacity=".4"/>
+  <path d="M270 460c4 18 8 26 14 31m166-31c-4 18-8 26-14 31" fill="none" stroke="#d4af37" stroke-width="3" opacity=".55"/>
+  <text x="360" y="816" fill="#d4af37" font-family="Georgia,serif" font-size="17" letter-spacing="8" text-anchor="middle">CREW · CUELLO REDONDO</text>
+</svg>

@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="IMPORIO.STOREE: ropa de calidad en Puerto Varas y Nueva Braunau. Entregas locales y envíos a todo Chile.">
+    <title>IMPORIO.STOREE — Ropa de calidad en Puerto Varas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="hero" id="inicio">
+        <nav class="site-nav container" aria-label="Navegación principal">
+            <a class="wordmark" href="#inicio" aria-label="IMPORIO.STOREE, inicio">IM<span>.</span></a>
+            <a class="nav-location" href="#contacto">Puerto Varas <span>·</span> Chile</a>
+            <a class="nav-contact" href="https://wa.me/56954128230" target="_blank" rel="noopener noreferrer">Contacto <span aria-hidden="true">↗</span></a>
+        </nav>
+
+        <div class="hero-main container">
+            <p class="eyebrow"><span class="eyebrow-line"></span> Puerto Varas · Nueva Braunau · Chile</p>
+            <h1>IMPORIO<span class="gold">.</span><br class="mobile-break">STOREE</h1>
+            <p class="hero-subtitle">Calidad que se siente. Estilo para todos los días.</p>
+            <p class="hero-copy">Ropa seleccionada con cuidado, atención cercana y entregas en Puerto Varas y Nueva Braunau. Enviamos a todo Chile por Starken y Chilexpress.</p>
+            <a class="button button-gold" href="https://wa.me/56954128230?text=Hola%2C%20vengo%20de%20la%20web%20de%20IMPORIO.STOREE%20y%20quiero%20consultar%20por%20las%20prendas." target="_blank" rel="noopener noreferrer">
+                Hablar por WhatsApp <span aria-hidden="true">↗</span>
+            </a>
+        </div>
+        <a class="hero-scroll" href="#catalogo"><span></span> Descubre la colección</a>
+        <div class="hero-index" aria-hidden="true">IM — 01</div>
+    </header>
+
+    <main>
+        <section class="collection section container" id="catalogo">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">La selección IMPORIO</p>
+                    <h2>Piezas para<br><span class="serif-italic">todos los días.</span></h2>
+                </div>
+                <p class="section-intro">Básicos versátiles y conjuntos cómodos, elegidos para acompañarte en cada temporada.</p>
+            </div>
+
+            <div class="catalog-tools" role="search">
+                <label class="search-box" for="product-search">
+                    <span class="search-icon" aria-hidden="true">⌕</span>
+                    <input id="product-search" type="search" placeholder="Buscar una prenda..." autocomplete="off" aria-controls="product-grid">
+                    <span class="search-hint">Buscar</span>
+                </label>
+                <div class="filter-list" role="group" aria-label="Filtrar productos por categoría">
+                    <button class="filter-button is-active" type="button" data-category="all" aria-pressed="true">Todas</button>
+                    <button class="filter-button" type="button" data-category="poleras" aria-pressed="false">Poleras</button>
+                    <button class="filter-button" type="button" data-category="polerones" aria-pressed="false">Polerones</button>
+                    <button class="filter-button" type="button" data-category="pantalones" aria-pressed="false">Pantalones / Buzos</button>
+                    <button class="filter-button" type="button" data-category="conjuntos" aria-pressed="false">Conjuntos</button>
+                </div>
+            </div>
+            <p class="results-count" id="results-count" aria-live="polite"></p>
+            <div class="product-grid" id="product-grid" aria-live="polite"></div>
+            <p class="empty-state" id="empty-state" hidden>No encontramos prendas con esa búsqueda. Prueba otro nombre o categoría.</p>
+            <p class="catalog-note">Precios en pesos chilenos. Las opciones de color y las medidas son referenciales: confirma stock y medidas exactas por WhatsApp.</p>
+        </section>
+
+        <section class="buying section" id="como-comprar">
+            <div class="container">
+                <div class="section-heading section-heading-simple">
+                    <div>
+                        <p class="eyebrow">Una experiencia simple</p>
+                        <h2>Comprar, <span class="serif-italic">sin vueltas.</span></h2>
+                    </div>
+                </div>
+                <div class="steps-grid">
+                    <article class="step-card">
+                        <span class="step-number">01</span>
+                        <h3>Elige tu prenda</h3>
+                        <p>Explora la colección y escoge tu producto, talla, color u oferta favorita.</p>
+                    </article>
+                    <article class="step-card">
+                        <span class="step-number">02</span>
+                        <h3>Coordina por WhatsApp</h3>
+                        <p>Escríbenos para confirmar disponibilidad, resolver dudas y coordinar el pago.</p>
+                    </article>
+                    <article class="step-card">
+                        <span class="step-number">03</span>
+                        <h3>Recibe tu pedido</h3>
+                        <p>Coordinamos una entrega local o enviamos tu compra a cualquier lugar de Chile.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="details section container" id="envios">
+            <div class="faq-column">
+                <p class="eyebrow">Estamos para ayudarte</p>
+                <h2>Información<br><span class="serif-italic">importante.</span></h2>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>¿Hacen envíos a todo Chile?</summary>
+                        <p>Sí. Enviamos a todo Chile a través de Starken y Chilexpress. También coordinamos entregas en Puerto Varas y Nueva Braunau.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>¿Qué medios de pago aceptan?</summary>
+                        <p>Puedes pagar mediante transferencia a CuentaRUT / BancoEstado o usando Mercado Pago. Confirma los detalles con nosotros por WhatsApp al coordinar tu pedido.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>¿Cómo confirmo talla y color?</summary>
+                        <p>Escríbenos por WhatsApp con el nombre de la prenda. Te confirmaremos las opciones disponibles antes de cerrar tu compra.</p>
+                    </details>
+                </div>
+            </div>
+
+            <aside class="reviews-column" aria-labelledby="reviews-title">
+                <p class="eyebrow">La comunidad IMPORIO</p>
+                <h2 id="reviews-title">Clientes <span class="serif-italic">IMPORIO.</span></h2>
+                <figure class="review-card">
+                    <div class="review-stars" aria-label="5 de 5 estrellas">★★★★★</div>
+                    <blockquote>“La calidad de las poleras superó mis expectativas. El pedido llegó rapidísimo a Puerto Varas.”</blockquote>
+                    <figcaption>Camila R. <span>· Puerto Varas</span></figcaption>
+                </figure>
+                <figure class="review-card">
+                    <div class="review-stars" aria-label="5 de 5 estrellas">★★★★★</div>
+                    <blockquote>“Me encantó poder pedir el pack y coordinar todo por WhatsApp. Muy buena atención.”</blockquote>
+                    <figcaption>Matías V. <span>· Nueva Braunau</span></figcaption>
+                </figure>
+            </aside>
+        </section>
+
+        <section class="contact-band" id="contacto">
+            <div class="container contact-band-inner">
+                <div>
+                    <p class="eyebrow">Puerto Varas · Nueva Braunau</p>
+                    <h2>Tu próximo favorito<br><span class="serif-italic">está aquí.</span></h2>
+                </div>
+                <a class="button button-gold" href="https://wa.me/56954128230?text=Hola%2C%20quiero%20conocer%20la%20colecci%C3%B3n%20de%20IMPORIO.STOREE." target="_blank" rel="noopener noreferrer">Hablemos por WhatsApp <span aria-hidden="true">↗</span></a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer container">
+        <a class="footer-brand" href="#inicio">IM<span>.</span></a>
+        <p class="copyright">&copy; 2026 IMPORIO.STOREE — Todos los derechos reservados.</p>
+        <div class="footer-links">
+            <a href="https://www.instagram.com/imporio.storee/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+            <a href="https://wa.me/56954128230" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a>
+        </div>
+        <p class="credit">Designed &amp; Developed by <a href="https://github.com/CookieG256" target="_blank" rel="noopener noreferrer">CookieG256</a></p>
+    </footer>
+
+    <dialog class="product-modal" id="product-modal" aria-labelledby="modal-title">
+        <div class="modal-shell">
+            <button class="modal-close" type="button" aria-label="Cerrar ficha del producto">×</button>
+            <div class="modal-product">
+                <div class="modal-image-wrap">
+                    <img id="modal-image" src="" alt="">
+                    <span class="modal-image-label">IMPORIO · FICHA DE PRODUCTO</span>
+                </div>
+                <div class="modal-content">
+                    <p class="eyebrow" id="modal-category"></p>
+                    <h2 id="modal-title"></h2>
+                    <p class="modal-description" id="modal-description"></p>
+                    <p class="modal-base-price">Precio unitario <strong id="modal-price"></strong></p>
+
+                    <div class="modal-section">
+                        <h3>Ofertas por cantidad</h3>
+                        <div class="modal-packs" id="modal-packs"></div>
+                    </div>
+
+                    <div class="modal-section" id="standard-colors-section">
+                        <h3>Colores <span>(confirmar disponibilidad)</span></h3>
+                        <div class="color-options" id="modal-colors"></div>
+                    </div>
+                    <div class="modal-section component-picker" id="component-picker" hidden></div>
+
+                    <div class="modal-section">
+                        <div class="size-heading">
+                            <h3>Guía de medidas</h3>
+                            <span>cm · referencial</span>
+                        </div>
+                        <div class="size-table-wrap">
+                            <table class="size-table">
+                                <thead>
+                                    <tr><th scope="col">Talla</th><th scope="col">Ancho</th><th scope="col">Largo</th></tr>
+                                </thead>
+                                <tbody id="modal-sizes"></tbody>
+                            </table>
+                        </div>
+                        <p class="measure-note">Medidas de referencia para orientar tu elección. Solicita confirmación de la prenda específica antes de comprar.</p>
+                    </div>
+
+                    <form class="order-form" id="order-form">
+                        <fieldset class="size-field" id="standard-size-field">
+                            <legend>Talla</legend>
+                            <div class="size-options" id="modal-size-options" role="group" aria-label="Seleccionar talla"></div>
+                        </fieldset>
+                        <label id="standard-color-field">
+                            Color
+                            <select id="order-color" name="color" required></select>
+                        </label>
+                        <label>
+                            Cantidad / oferta
+                            <select id="order-quantity" name="quantity" required></select>
+                        </label>
+                        <a class="button button-gold modal-order" id="modal-order" href="https://wa.me/56954128230" target="_blank" rel="noopener noreferrer">Pedir esta prenda por WhatsApp <span aria-hidden="true">↗</span></a>
+                    </form>
+                    <p class="modal-order-note">El mensaje incluirá prenda, talla, color y cantidad para confirmar disponibilidad.</p>
+                </div>
+            </div>
+        </div>
+    </dialog>
+    <script type="module" src="js/catalog.js"></script>
+</body>
+</html>

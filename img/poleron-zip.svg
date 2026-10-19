@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 900" role="img">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#25251f"/><stop offset="1" stop-color="#10100e"/></linearGradient>
+    <linearGradient id="cloth" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8f887c"/><stop offset=".52" stop-color="#69645c"/><stop offset="1" stop-color="#46433e"/></linearGradient>
+  </defs>
+  <rect width="720" height="900" fill="url(#bg)"/>
+  <circle cx="535" cy="210" r="185" fill="#d4af37" opacity=".04"/>
+  <ellipse cx="360" cy="744" rx="208" ry="26" fill="#000" opacity=".58"/>
+  <path d="M260 187c29-27 62-40 100-40s71 13 100 40l67 43 92 70-64 94-74-44v331H239V350l-74 44-64-94 92-70z" fill="url(#cloth)"/>
+  <path d="M286 183c8 57 33 84 74 84s66-27 74-84" fill="none" stroke="#34322f" stroke-width="14"/>
+  <path d="M286 191 347 268v411m88-488-61 77v411" fill="none" stroke="#b9b0a1" stroke-width="4" opacity=".7"/>
+  <path d="M360 271v409" stroke="#25231f" stroke-width="5"/>
+  <path d="M354 312h12m-12 42h12m-12 42h12m-12 42h12m-12 42h12m-12 42h12m-12 42h12" stroke="#d4af37" stroke-width="3" opacity=".85"/>
+  <path d="M266 468c0-20 17-37 37-37h27v68h-64zm151-37h27c20 0 37 17 37 37v31h-64z" fill="#555149" stroke="#a39b8c" stroke-width="3"/>
+  <text x="360" y="816" fill="#d4af37" font-family="Georgia,serif" font-size="17" letter-spacing="8" text-anchor="middle">FULL ZIP · 340 GSM</text>
+</svg>
