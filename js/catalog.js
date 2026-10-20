@@ -5,8 +5,8 @@ const CURRENCY = new Intl.NumberFormat("es-CL", {
     maximumFractionDigits: 0,
 });
 
-// Add or update products here. A null price or measurement is shown as
-// "Consultar" until the store confirms the current product information.
+// Add or update product details here. Unknown measurements remain marked as
+// unavailable instead of being guessed.
 const PRODUCTS = [
     {
         id: "polera-basica-soft",
@@ -126,7 +126,7 @@ const PRODUCTS = [
         categoryLabel: "Polerones",
         collection: "05 / NIÑOS",
         description: "Polerón canguro infantil",
-        price: null,
+        price: 14990,
         image: "img/poleron-canguro.svg",
         imageAlt: "Ilustración referencial de polerón infantil",
         colors: [{ name: "Consultar color disponible", hex: "#756849" }],
@@ -169,7 +169,7 @@ const PRODUCTS = [
         categoryLabel: "Polerones",
         collection: "07 / CREW",
         description: "Hombre · Cuello redondo",
-        price: null,
+        price: 18990,
         image: "img/poleron-crew.svg",
         imageAlt: "Ilustración referencial de polerón cuello redondo",
         colors: [{ name: "Consultar color disponible", hex: "#756849" }],
@@ -277,6 +277,7 @@ const PRODUCTS = [
 
 const productGrid = document.querySelector("#product-grid");
 const productSearch = document.querySelector("#product-search");
+const productSort = document.querySelector("#product-sort");
 const filterButtons = [...document.querySelectorAll(".filter-button")];
 const resultsCount = document.querySelector("#results-count");
 const emptyState = document.querySelector("#empty-state");
@@ -300,6 +301,7 @@ const modalOrder = document.querySelector("#modal-order");
 const closeModalButton = document.querySelector(".modal-close");
 
 let activeCategory = "all";
+let activeSort = "name-asc";
 let activeProduct = null;
 let selectedSize = "";
 let selectedComponents = [];
@@ -336,6 +338,17 @@ function productMatches(product, query) {
     return matchesCategory && (!normalizedQuery || searchableText.includes(normalizedQuery));
 }
 
+function compareProducts(first, second) {
+    if (activeSort === "name-asc" || activeSort === "name-desc") {
+        const direction = activeSort === "name-asc" ? 1 : -1;
+        return direction * first.name.localeCompare(second.name, "es", { sensitivity: "base" });
+    }
+
+    const direction = activeSort === "price-asc" ? 1 : -1;
+    return direction * (first.price - second.price)
+        || first.name.localeCompare(second.name, "es", { sensitivity: "base" });
+}
+
 function renderProductCard(product, index) {
     return `
         <article class="product-card" data-product-id="${escapeHtml(product.id)}" tabindex="0" aria-label="Ver ficha de ${escapeHtml(product.name)}">
@@ -358,7 +371,9 @@ function renderProductCard(product, index) {
 }
 
 function renderCatalog() {
-    const visibleProducts = PRODUCTS.filter((product) => productMatches(product, productSearch.value));
+    const visibleProducts = PRODUCTS
+        .filter((product) => productMatches(product, productSearch.value))
+        .sort(compareProducts);
 
     productGrid.innerHTML = visibleProducts.map(renderProductCard).join("");
     resultsCount.textContent = `${visibleProducts.length} ${visibleProducts.length === 1 ? "prenda" : "prendas"}`;
@@ -378,8 +393,8 @@ function buildQuantityOptions(product) {
         const quantity = index + 1;
         return {
             quantity,
-            label: `${quantity} ${quantity === 1 ? "unidad" : "unidades"} · ${displayPrice(product.price == null ? null : product.price * quantity)}`,
-            total: product.price == null ? "" : product.price * quantity,
+            label: `${quantity} ${quantity === 1 ? "unidad" : "unidades"} · ${formatPrice(product.price * quantity)}`,
+            total: product.price * quantity,
         };
     });
 }
@@ -396,13 +411,11 @@ function renderProductModal(product) {
     modalTitle.textContent = product.name;
     modalCategory.textContent = product.categoryLabel;
     modalDescription.textContent = product.description;
-    modalPrice.textContent = product.price == null ? "Consultar precio" : `${formatPrice(product.price)} CLP`;
+    modalPrice.textContent = `${formatPrice(product.price)} CLP`;
 
     const offers = product.offers.length
         ? product.offers
-        : product.price == null
-            ? []
-            : [{ quantity: 1, total: product.price, label: "1 unidad" }];
+        : [{ quantity: 1, total: product.price, label: "1 unidad" }];
     modalPacks.innerHTML = offers.length ? offers.map((offer) => `
         <div class="modal-pack">
             <span>${escapeHtml(offer.label)}</span>
@@ -436,7 +449,11 @@ function renderProductModal(product) {
         : "";
 
     modalSizes.innerHTML = product.sizes.map((size) => `
-        <tr><th scope="row">${escapeHtml(size.label || size.size)}</th><td>${size.width == null ? "Consultar" : `${escapeHtml(size.width)} cm`}</td><td>${size.length == null ? "Consultar" : `${escapeHtml(size.length)} cm`}</td></tr>`).join("");
+        <tr><th scope="row">${escapeHtml(size.label || size.size)}</th><td>${size.width == null ? "—" : `${escapeHtml(size.width)} cm`}</td><td>${size.length == null ? "—" : `${escapeHtml(size.length)} cm`}</td></tr>`).join("");
+    const missingMeasurements = product.sizes.some((size) => size.width == null || size.length == null);
+    document.querySelector(".measure-note").textContent = missingMeasurements
+        ? "La ficha recibida no incluye medidas para todas las tallas. Los guiones indican datos no informados; no representan una medida estimada."
+        : "Medidas de referencia de la ficha técnica. Confirma la disponibilidad de tu talla antes de comprar.";
 
     selectedSize = product.sizes[0]?.label || product.sizes[0]?.size || "";
     modalSizeOptions.innerHTML = product.sizes.map((size, index) => `
@@ -540,6 +557,10 @@ filterButtons.forEach((button) => {
 });
 
 productSearch.addEventListener("input", renderCatalog);
+productSort.addEventListener("change", () => {
+    activeSort = productSort.value;
+    renderCatalog();
+});
 
 productGrid.addEventListener("click", (event) => {
     const card = event.target.closest("[data-product-id]");

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#000000">
-    <meta name="description" content="IMPORIO.STOREE: ropa de calidad en Puerto Varas y Nueva Braunau. Entregas locales y envíos a todo Chile.">
+    <meta name="description" content="IMPORIO.STOREE: prendas de calidad con entregas presenciales en Puerto Varas y Nueva Braunau.">
     <title>IMPORIO.STOREE — Ropa de calidad en Puerto Varas</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,8 +22,8 @@
         <div class="hero-main container">
             <p class="eyebrow"><span class="eyebrow-line"></span> Puerto Varas · Nueva Braunau · Chile</p>
             <h1>IMPORIO<span class="gold">.</span><br class="mobile-break">STOREE</h1>
-            <p class="hero-subtitle">Calidad que se siente. Estilo para todos los días.</p>
-            <p class="hero-copy">Ropa seleccionada con cuidado, atención cercana y entregas en Puerto Varas y Nueva Braunau. Enviamos a todo Chile por Starken y Chilexpress.</p>
+            <p class="hero-subtitle">Calidad seleccionada. Estilo para cada día.</p>
+            <p class="hero-copy">Descubre prendas cuidadosamente seleccionadas, con entregas presenciales en Puerto Varas y Nueva Braunau. Los envíos a todo Chile estarán disponibles próximamente.</p>
             <a class="button button-gold" href="https://wa.me/56954128230?text=Hola%2C%20vengo%20de%20la%20web%20de%20IMPORIO.STOREE%20y%20quiero%20consultar%20por%20las%20prendas." target="_blank" rel="noopener noreferrer">
                 Hablar por WhatsApp <span aria-hidden="true">↗</span>
             </a>
@@ -39,15 +39,26 @@
                     <p class="eyebrow">La selección IMPORIO</p>
                     <h2>Piezas para<br><span class="serif-italic">todos los días.</span></h2>
                 </div>
-                <p class="section-intro">Básicos versátiles y conjuntos cómodos, elegidos para acompañarte en cada temporada.</p>
+                <p class="section-intro">Prendas versátiles y conjuntos cómodos, seleccionados para acompañarte cada día.</p>
             </div>
 
             <div class="catalog-tools" role="search">
-                <label class="search-box" for="product-search">
-                    <span class="search-icon" aria-hidden="true">⌕</span>
-                    <input id="product-search" type="search" placeholder="Buscar una prenda..." autocomplete="off" aria-controls="product-grid">
-                    <span class="search-hint">Buscar</span>
-                </label>
+                <div class="catalog-top-row">
+                    <label class="search-box" for="product-search">
+                        <span class="search-icon" aria-hidden="true">⌕</span>
+                        <input id="product-search" type="search" placeholder="Buscar una prenda..." autocomplete="off" aria-controls="product-grid">
+                        <span class="search-hint">Buscar</span>
+                    </label>
+                    <label class="sort-box" for="product-sort">
+                        <span>Ordenar por</span>
+                        <select id="product-sort" aria-controls="product-grid">
+                            <option value="name-asc">Nombre: A - Z</option>
+                            <option value="name-desc">Nombre: Z - A</option>
+                            <option value="price-asc">Precio: Menor a Mayor</option>
+                            <option value="price-desc">Precio: Mayor a Menor</option>
+                        </select>
+                    </label>
+                </div>
                 <div class="filter-list" role="group" aria-label="Filtrar productos por categoría">
                     <button class="filter-button is-active" type="button" data-category="all" aria-pressed="true">Todas</button>
                     <button class="filter-button" type="button" data-category="poleras" aria-pressed="false">Poleras</button>
@@ -59,7 +70,7 @@
             <p class="results-count" id="results-count" aria-live="polite"></p>
             <div class="product-grid" id="product-grid" aria-live="polite"></div>
             <p class="empty-state" id="empty-state" hidden>No encontramos prendas con esa búsqueda. Prueba otro nombre o categoría.</p>
-            <p class="catalog-note">Precios en pesos chilenos. Las opciones de color y las medidas son referenciales: confirma stock y medidas exactas por WhatsApp.</p>
+            <p class="catalog-note">Precios en CLP. Confirma por WhatsApp la disponibilidad de colores y tallas antes de coordinar tu compra.</p>
         </section>
 
         <section class="buying section" id="como-comprar">
@@ -74,17 +85,17 @@
                     <article class="step-card">
                         <span class="step-number">01</span>
                         <h3>Elige tu prenda</h3>
-                        <p>Explora la colección y escoge tu producto, talla, color u oferta favorita.</p>
+                        <p>Selecciona una prenda, talla y color de la colección.</p>
                     </article>
                     <article class="step-card">
                         <span class="step-number">02</span>
                         <h3>Coordina por WhatsApp</h3>
-                        <p>Escríbenos para confirmar disponibilidad, resolver dudas y coordinar el pago.</p>
+                        <p>Confirma disponibilidad y coordina el pago de forma directa.</p>
                     </article>
                     <article class="step-card">
                         <span class="step-number">03</span>
                         <h3>Recibe tu pedido</h3>
-                        <p>Coordinamos una entrega local o enviamos tu compra a cualquier lugar de Chile.</p>
+                        <p>Retira presencialmente en Puerto Varas o Nueva Braunau. Los envíos nacionales estarán disponibles próximamente.</p>
                     </article>
                 </div>
             </div>
@@ -96,16 +107,16 @@
                 <h2>Información<br><span class="serif-italic">importante.</span></h2>
                 <div class="faq-list">
                     <details class="faq-item">
-                        <summary>¿Hacen envíos a todo Chile?</summary>
-                        <p>Sí. Enviamos a todo Chile a través de Starken y Chilexpress. También coordinamos entregas en Puerto Varas y Nueva Braunau.</p>
+                        <summary>¿Dónde puedo recibir mi pedido?</summary>
+                        <p>Actualmente coordinamos entregas presenciales en Puerto Varas y Nueva Braunau. Los envíos a todo Chile por Starken y Chilexpress estarán disponibles próximamente.</p>
                     </details>
                     <details class="faq-item">
                         <summary>¿Qué medios de pago aceptan?</summary>
-                        <p>Puedes pagar mediante transferencia a CuentaRUT / BancoEstado o usando Mercado Pago. Confirma los detalles con nosotros por WhatsApp al coordinar tu pedido.</p>
+                        <p>Aceptamos efectivo (dinero físico) y transferencia bancaria desde cualquier banco, incluida CuentaRUT y BancoEstado.</p>
                     </details>
                     <details class="faq-item">
                         <summary>¿Cómo confirmo talla y color?</summary>
-                        <p>Escríbenos por WhatsApp con el nombre de la prenda. Te confirmaremos las opciones disponibles antes de cerrar tu compra.</p>
+                        <p>Consulta las opciones disponibles por WhatsApp. Confirmaremos talla y color antes de cerrar la compra.</p>
                     </details>
                 </div>
             </div>
@@ -145,6 +156,7 @@
             <a href="https://wa.me/56954128230" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a>
         </div>
         <p class="credit">Designed &amp; Developed by <a href="https://github.com/CookieG256" target="_blank" rel="noopener noreferrer">CookieG256</a></p>
+        <p class="footer-service-note">Entregas presenciales en Puerto Varas y Nueva Braunau · Envíos nacionales por Starken y Chilexpress próximamente · Pago en efectivo o transferencia bancaria desde cualquier banco.</p>
     </footer>
 
     <dialog class="product-modal" id="product-modal" aria-labelledby="modal-title">
